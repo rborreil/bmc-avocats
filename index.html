@@ -1,662 +1,1027 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B.M.C | Associés - Cabinet d'Avocats</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1a365d',
-                        secondary: '#c6a769',
-                        dark: '#0f172a',
-                        light: '#f8fafc'
-                    },
-                    fontFamily: {
-                        sans: ['"DM Sans"', 'sans-serif'],
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 1s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': {
-                                opacity: '0'
-                            },
-                            '100%': {
-                                opacity: '1'
-                            }
-                        },
-                        slideUp: {
-                            '0%': {
-                                transform: 'translateY(30px)',
-                                opacity: '0'
-                            },
-                            '100%': {
-                                transform: 'translateY(0)',
-                                opacity: '1'
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a365d",
+              secondary: "#c6a769",
+              dark: "#0f172a",
+              light: "#f8fafc",
+            },
+            fontFamily: {
+              sans: ['"DM Sans"', "sans-serif"],
+              serif: ['"Cormorant Garamond"', "serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 1s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": {
+                  opacity: "0",
+                },
+                "100%": {
+                  opacity: "1",
+                },
+              },
+              slideUp: {
+                "0%": {
+                  transform: "translateY(30px)",
+                  opacity: "0",
+                },
+                "100%": {
+                  transform: "translateY(0)",
+                  opacity: "1",
+                },
+              },
+            },
+          },
+        },
+      };
     </script>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="font-sans text-dark bg-light">
+  <body class="font-sans text-dark bg-light">
     <!-- Header -->
     <header class="fixed w-full bg-white z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="text-2xl font-serif font-bold tracking-tight text-primary">B . M . C | Associés</a>
+      <div
+        class="container mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-2xl font-serif font-bold tracking-tight text-primary"
+          >B . M . C | Associés</a
+        >
 
-            <nav class="hidden lg:flex space-x-10">
-                <a href="#" class="nav-link text-sm uppercase tracking-wider font-medium">Accueil</a>
-                <a href="#" class="nav-link text-sm uppercase tracking-wider font-medium">Le cabinet</a>
-                <a href="#" class="nav-link text-sm uppercase tracking-wider font-medium">Expertises</a>
-                <a href="#" class="nav-link text-sm uppercase tracking-wider font-medium">Équipe</a>
-                <a href="#" class="nav-link text-sm uppercase tracking-wider font-medium">Actualités</a>
-                <a href="#" class="nav-link text-sm uppercase tracking-wider font-medium">Contact</a>
-            </nav>
+        <nav class="hidden lg:flex space-x-10">
+          <a
+            href="index.html"
+            class="nav-link text-sm uppercase tracking-wider font-medium"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-sm uppercase tracking-wider font-medium"
+            >Le cabinet</a
+          >
+          <a
+            href="#expertise"
+            class="nav-link text-sm uppercase tracking-wider font-medium"
+            >Expertises</a
+          >
+          <a
+            href="#team"
+            class="nav-link text-sm uppercase tracking-wider font-medium"
+            >Équipe</a
+          >
+          <a
+            href="#news"
+            class="nav-link text-sm uppercase tracking-wider font-medium"
+            >Actualités</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-sm uppercase tracking-wider font-medium"
+            >Contact</a
+          >
+        </nav>
 
-            <div class="hidden lg:flex items-center space-x-6">
-                <a href="#" class="text-sm uppercase tracking-wider font-medium flex items-center">
-                    <i class="fas fa-phone-alt mr-2 text-secondary"></i>
-                    <span>01 23 45 67 89</span>
-                </a>
-                <a href="#" class="btn-primary px-6 py-2 text-sm">RDV</a>
-            </div>
-
-            <button class="lg:hidden text-xl text-primary" id="mobile-menu-button">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div class="hidden lg:flex items-center space-x-6">
+          <a
+            href="tel:0123456789"
+            class="text-sm uppercase tracking-wider font-medium flex items-center"
+          >
+            <i class="fas fa-phone-alt mr-2 text-secondary"></i>
+            <span>01 23 45 67 89</span>
+          </a>
+          <a
+            href="https://calendly.com/fr"
+            target="new"
+            class="btn-primary px-6 py-2 text-sm"
+            >RDV</a
+          >
         </div>
 
-        <!-- Mobile menu -->
-        <div class="lg:hidden hidden bg-white w-full py-4 px-6 absolute left-0 border-t border-gray-100 shadow-lg"
-            id="mobile-menu">
-            <div class="flex flex-col space-y-5">
-                <a href="#" class="py-2 text-sm uppercase tracking-wider font-medium">Accueil</a>
-                <a href="#" class="py-2 text-sm uppercase tracking-wider font-medium">Le cabinet</a>
-                <a href="#" class="py-2 text-sm uppercase tracking-wider font-medium">Expertises</a>
-                <a href="#" class="py-2 text-sm uppercase tracking-wider font-medium">Équipe</a>
-                <a href="#" class="py-2 text-sm uppercase tracking-wider font-medium">Actualités</a>
-                <a href="#" class="py-2 text-sm uppercase tracking-wider font-medium">Contact</a>
-                <div class="pt-4 border-t border-gray-100">
-                    <a href="#" class="btn-primary w-full block text-center px-6 py-3 text-sm">Prendre rendez-vous</a>
-                </div>
-            </div>
+        <button class="lg:hidden text-xl text-primary" id="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        class="lg:hidden hidden bg-white w-full py-4 px-6 absolute left-0 border-t border-gray-100 shadow-lg"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col space-y-5">
+          <a
+            href="index.html"
+            class="py-2 text-sm uppercase tracking-wider font-medium"
+            >Accueil</a
+          >
+          <a
+            href="#about"
+            class="py-2 text-sm uppercase tracking-wider font-medium"
+            >Le cabinet</a
+          >
+          <a
+            href="#expertise"
+            class="py-2 text-sm uppercase tracking-wider font-medium"
+            >Expertises</a
+          >
+          <a
+            href="#team"
+            class="py-2 text-sm uppercase tracking-wider font-medium"
+            >Équipe</a
+          >
+          <a
+            href="#news"
+            class="py-2 text-sm uppercase tracking-wider font-medium"
+            >Actualités</a
+          >
+          <a
+            href="#contact"
+            class="py-2 text-sm uppercase tracking-wider font-medium"
+            >Contact</a
+          >
+          <div class="pt-4 border-t border-gray-100">
+            <a
+              href="https://calendly.com/fr"
+              target="new"
+              class="btn-primary w-full block text-center px-6 py-3 text-sm"
+              >Prendre rendez-vous</a
+            >
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center overflow-hidden">
-        <div class="absolute inset-0 hero-overlay opacity-95"></div>
-        <div
-            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center">
-        </div>
+      <!-- Image -->
+      <div
+        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"
+      ></div>
 
-        <div class="container mx-auto px-6 relative z-10 animate-fade-in">
-            <div class="max-w-2xl">
-                <h1 class="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white animate-slide-up">
-                    Excellence juridique <span class="text-secondary">sur mesure</span>
-                </h1>
-                <p class="text-xl text-gray-200 mb-10 animate-slide-up animate-delay-100">
-                    Un cabinet d'avocats pénalistes alliant expertise pointue et approche personnalisée pour défendre
-                    vos intérêts.
-                </p>
-                <div
-                    class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 animate-slide-up animate-delay-200">
-                    <a href="#" class="btn-secondary px-8 py-4">Nous contacter</a>
-                    <a href="#" class="btn-primary px-8 py-4">Nos expertises</a>
-                </div>
-            </div>
-        </div>
+      <!-- Overlay sombre -->
+      <div class="absolute inset-0 bg-black/60"></div>
 
-        <div
-            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white scroll-indicator animate-fade-in animate-delay-500">
-            <i class="fas fa-chevron-down text-2xl"></i>
+      <!-- Content -->
+      <div class="container mx-auto px-6 relative z-10 animate-fade-in">
+        <div class="max-w-2xl">
+          <h1
+            class="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white animate-slide-up"
+          >
+            Excellence juridique <span class="text-secondary">sur mesure</span>
+          </h1>
+          <p
+            class="text-xl text-gray-200 mb-10 animate-slide-up animate-delay-100"
+          >
+            Un cabinet d'avocats pénalistes alliant expertise pointue et
+            approche personnalisée pour défendre vos intérêts.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 animate-slide-up animate-delay-200"
+          >
+            <a href="#" class="btn-secondary px-8 py-4">Nous contacter</a>
+            <a href="#" class="btn-primary px-8 py-4">Nos expertises</a>
+          </div>
         </div>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white scroll-indicator animate-fade-in animate-delay-500"
+      >
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div class="animate-fade-in animate-delay-100">
-                    <div class="stat-number font-serif font-bold mb-2">10+</div>
-                    <p class="text-sm uppercase tracking-wider text-gray-500">Années d'expérience</p>
-                </div>
-                <div class="animate-fade-in animate-delay-200">
-                    <div class="stat-number font-serif font-bold mb-2">150+</div>
-                    <p class="text-sm uppercase tracking-wider text-gray-500">Clients satisfaits</p>
-                </div>
-                <div class="animate-fade-in animate-delay-300">
-                    <div class="stat-number font-serif font-bold mb-2">3</div>
-                    <p class="text-sm uppercase tracking-wider text-gray-500">Avocats experts</p>
-                </div>
-                <div class="animate-fade-in animate-delay-400">
-                    <div class="stat-number font-serif font-bold mb-2">100%</div>
-                    <p class="text-sm uppercase tracking-wider text-gray-500">Proches de vous</p>
-                    <!-- OU "Dédiés à vos intérêts" -->
-                </div>
-            </div>
+    <section id="stats" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+          <div class="animate-fade-in animate-delay-100">
+            <div class="stat-number font-serif font-bold mb-2">10+</div>
+            <p class="text-sm uppercase tracking-wider text-gray-500">
+              Années d'expérience
+            </p>
+          </div>
+          <div class="animate-fade-in animate-delay-200">
+            <div class="stat-number font-serif font-bold mb-2">150+</div>
+            <p class="text-sm uppercase tracking-wider text-gray-500">
+              Clients satisfaits
+            </p>
+          </div>
+          <div class="animate-fade-in animate-delay-300">
+            <div class="stat-number font-serif font-bold mb-2">3</div>
+            <p class="text-sm uppercase tracking-wider text-gray-500">
+              Avocats experts
+            </p>
+          </div>
+          <div class="animate-fade-in animate-delay-400">
+            <div class="stat-number font-serif font-bold mb-2">100%</div>
+            <p class="text-sm uppercase tracking-wider text-gray-500">
+              Proches de vous
+            </p>
+            <!-- OU "Dédiés à vos intérêts" -->
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-20 bg-light">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="lg:w-1/2 mb-16 lg:mb-0 lg:pr-16 animate-fade-in">
-                    <h2 class="font-serif text-4xl font-bold mb-8 relative">
-                        <span class="text-primary">Le cabinet</span>
-                        <span class="absolute -bottom-3 left-0 w-16 h-1 bg-secondary"></span>
-                    </h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Fondé en 2025, le cabinet B.M.C Associés s'est imposé comme une référence en droit pénal
-                        grâce à son approche rigoureuse et son engagement sans faille envers ses clients.
-                    </p>
-                    <p class="text-gray-600 mb-8 leading-relaxed">
-                        Notre philosophie repose sur trois piliers : l'excellence juridique, la compréhension
-                        approfondie des enjeux de nos clients et une relation de confiance transparente.
-                    </p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="btn-primary px-8 py-3">En savoir plus</a>
-                        <a href="#" class="flex items-center text-primary font-medium group">
-                            <span class="mr-2">Visionner notre vidéo</span>
-                            <i
-                                class="fas fa-play-circle text-secondary text-xl group-hover:transform group-hover:scale-110 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 relative animate-fade-in animate-delay-100">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                            alt="Cabinet d'avocats" class="w-full h-auto rounded shadow-xl">
-                        <div
-                            class="absolute -bottom-6 -right-6 bg-primary text-white p-8 w-40 h-40 flex flex-col justify-center items-center">
-                            <span class="font-serif text-4xl font-bold">10</span>
-                            <span class="text-sm uppercase tracking-wider">ans d'expertise</span>
-                        </div>
-                    </div>
-                </div>
+    <section id="about" class="py-20 bg-light">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="lg:w-1/2 mb-16 lg:mb-0 lg:pr-16 animate-fade-in">
+            <h2 class="font-serif text-4xl font-bold mb-8 relative">
+              <span class="text-primary">Le cabinet</span>
+              <span
+                class="absolute -bottom-3 left-0 w-16 h-1 bg-secondary"
+              ></span>
+            </h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Fondé en 2025, le cabinet B.M.C Associés s'est imposé comme une
+              référence en droit pénal grâce à son approche rigoureuse et son
+              engagement sans faille envers ses clients.
+            </p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              Notre philosophie repose sur trois piliers : l'excellence
+              juridique, la compréhension approfondie des enjeux de nos clients
+              et une relation de confiance transparente.
+            </p>
+            <div class="flex space-x-6">
+              <a href="#" class="btn-primary px-8 py-3">En savoir plus</a>
+              <a
+                href="#"
+                class="flex items-center text-primary font-medium group"
+              >
+                <span class="mr-2">Visionner notre vidéo</span>
+                <i
+                  class="fas fa-play-circle text-secondary text-xl group-hover:transform group-hover:scale-110 transition-transform"
+                ></i>
+              </a>
             </div>
+          </div>
+          <div class="lg:w-1/2 relative animate-fade-in animate-delay-100">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                alt="Cabinet d'avocats"
+                class="w-full h-auto rounded shadow-xl"
+              />
+              <div
+                class="absolute -bottom-6 -right-6 bg-primary text-white p-8 w-40 h-40 flex flex-col justify-center items-center"
+              >
+                <span class="font-serif text-4xl font-bold">10</span>
+                <span class="text-sm uppercase tracking-wider"
+                  >ans d'expertise</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Expertise Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20 animate-fade-in">
-                <h2 class="font-serif text-4xl font-bold mb-4">
-                    <span class="text-primary">Domaines</span> d'expertise
-                </h2>
-                <p class="max-w-2xl mx-auto text-gray-600">
-                    Nos avocats spécialisés vous accompagnent dans tous les aspects du droit pénal avec une
-                    expertise reconnue.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Expertise 1 -->
-                <div class="expertise-card bg-light p-10 rounded animate-fade-in animate-delay-100">
-                    <div class="text-5xl mb-6 text-secondary">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4 text-primary">Droit Pénal Spécial</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Etude détaillée des infractions contre les personnes, contre les biens, contre la Nation, mais également d'ordre économiques et financières (affaires), environnementales, traitant les questions liées au travail, à la santé publique, à la consommation, au numérique, ...
-                    </p>
-                    <a href="#"
-                        class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group">
-                        <span class="mr-2">En savoir plus</span>
-                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                </div>
-
-                <!-- Expertise 2 -->
-                <div class="expertise-card bg-light p-10 rounded animate-fade-in animate-delay-200">
-                    <div class="text-5xl mb-6 text-secondary">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4 text-primary">Droit Pénal Général</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Qualification des faits, détermination de la personne pénalement responsable, évaluation des éléments constitutifs d'une infraction, analyse des éventuelles circonstances justificatives ou exonératoires, orientation de la politique de sanction.
-                    </p>
-                    <a href="#"
-                        class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group">
-                        <span class="mr-2">En savoir plus</span>
-                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                </div>
-
-                <!-- Expertise 3 -->
-                <div class="expertise-card bg-light p-10 rounded animate-fade-in animate-delay-300">
-                    <div class="text-5xl mb-6 text-secondary">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold mb-4 text-primary">Procédure Pénale</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Accompagnement autour de l'organisation juridictionnelle et des mécanismes formels de la répression. S'y préparer, y faire face, les différents recours existants, autant de sujets sur lesquels nous apportons aussi notre expertise légale.
-                    </p>
-                    <a href="#"
-                        class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group">
-                        <span class="mr-2">En savoir plus</span>
-                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="text-center mt-16 animate-fade-in">
-                <a href="#" class="btn-primary inline-block px-10 py-4">Découvrir toutes nos expertises</a>
-            </div>
+    <section id="expertise" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20 animate-fade-in">
+          <h2 class="font-serif text-4xl font-bold mb-4">
+            <span class="text-primary">Domaines</span> d'expertise
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Nos avocats spécialisés vous accompagnent dans tous les aspects du
+            droit pénal avec une expertise reconnue.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Expertise 1 -->
+          <div
+            class="expertise-card bg-light p-10 rounded animate-fade-in animate-delay-100"
+          >
+            <div class="text-5xl mb-6 text-secondary">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold mb-4 text-primary">
+              Droit Pénal Spécial
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Etude détaillée des infractions contre les personnes, contre les
+              biens, contre la Nation, mais également d'ordre économiques et
+              financières (affaires), environnementales, traitant les questions
+              liées au travail, à la santé publique, à la consommation, au
+              numérique, ...
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group"
+            >
+              <span class="mr-2">En savoir plus</span>
+              <i
+                class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Expertise 2 -->
+          <div
+            class="expertise-card bg-light p-10 rounded animate-fade-in animate-delay-200"
+          >
+            <div class="text-5xl mb-6 text-secondary">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold mb-4 text-primary">
+              Droit Pénal Général
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Qualification des faits, détermination de la personne pénalement
+              responsable, évaluation des éléments constitutifs d'une
+              infraction, analyse des éventuelles circonstances justificatives
+              ou exonératoires, orientation de la politique de sanction.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group"
+            >
+              <span class="mr-2">En savoir plus</span>
+              <i
+                class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Expertise 3 -->
+          <div
+            class="expertise-card bg-light p-10 rounded animate-fade-in animate-delay-300"
+          >
+            <div class="text-5xl mb-6 text-secondary">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold mb-4 text-primary">
+              Procédure Pénale
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Accompagnement autour de l'organisation juridictionnelle et des
+              mécanismes formels de la répression. S'y préparer, y faire face,
+              les différents recours existants, autant de sujets sur lesquels
+              nous apportons aussi notre expertise légale.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group"
+            >
+              <span class="mr-2">En savoir plus</span>
+              <i
+                class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-16 animate-fade-in">
+          <a href="#" class="btn-primary inline-block px-10 py-4"
+            >Découvrir toutes nos expertises</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Team Section -->
-    <section class="py-20 bg-primary text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20 animate-fade-in">
-                <h2 class="font-serif text-4xl font-bold mb-4">
-                    Notre <span class="text-secondary">équipe</span>
-                </h2>
-                <p class="max-w-2xl mx-auto text-gray-300">
-                    Des avocats expérimentés et passionnés, reconnus pour leur excellence et leur engagement.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Member 1 -->
-                <div class="team-member text-center animate-fade-in animate-delay-100">
-                    <div class="mb-6 overflow-hidden rounded-lg">
-                        <img src="./img/mathilde-bossi_avocate-penaliste.jpg"
-                            alt="Sophie Martins" class="team-member-img w-full h-96 object-cover">
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold mb-2">Mathilde B</h3>
-                    <p class="text-secondary mb-4">Avocate Associée</p>
-                    <p class="text-gray-300 mb-6 px-4">
-                        Spécialiste en droit pénal avec 10 ans d'expérience.
-                    </p>
-                    <a href="#"
-                        class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-white group">
-                        <span class="mr-2">Profil complet</span>
-                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                </div>
-
-                <!-- Member 2 -->
-                <div class="team-member text-center animate-fade-in animate-delay-200">
-                    <div class="mb-6 overflow-hidden rounded-lg">
-                        <img src="./img/antony-martins_avocat-penaliste.jpg"
-                            alt="Jean Canet" class="team-member-img w-full h-96 object-cover">
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold mb-2">Antony M</h3>
-                    <p class="text-secondary mb-4">Avocat Associé</p>
-                    <p class="text-gray-300 mb-6 px-4">
-                        Expert en contentieux commercial et arbitrage international, ancien secrétaire de la conférence.
-                    </p>
-                    <a href="#"
-                        class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-white group">
-                        <span class="mr-2">Profil complet</span>
-                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                </div>
-
-                <!-- Member 3 -->
-                <div class="team-member text-center animate-fade-in animate-delay-300">
-                    <div class="mb-6 overflow-hidden rounded-lg">
-                        <img src="./img/laura-canet_avocate-arbitrage.jpg"
-                            alt="Marie Leroy" class="team-member-img w-full h-96 object-cover">
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold mb-2">Laura C</h3>
-                    <p class="text-secondary mb-4">Avocate Associée</p>
-                    <p class="text-gray-300 mb-6 px-4">
-                        International Arbitration II Co- founder Young Mute Off Thursdays (YMOT)
-                    </p>
-                    <a href="#"
-                        class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-white group">
-                        <span class="mr-2">Profil complet</span>
-                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="text-center mt-16 animate-fade-in">
-                <a href="#" class="btn-secondary inline-block px-10 py-4">Rencontrer toute l'équipe</a>
-            </div>
+    <section id="team" class="py-20 bg-primary text-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20 animate-fade-in">
+          <h2 class="font-serif text-4xl font-bold mb-4">
+            Notre <span class="text-secondary">équipe</span>
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-300">
+            Des avocats expérimentés et passionnés, reconnus pour leur
+            excellence et leur engagement.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Member 1 -->
+          <div
+            class="team-member text-center animate-fade-in animate-delay-100"
+          >
+            <div class="mb-6 overflow-hidden rounded-lg">
+              <img
+                src="./img/mathilde-bossi_avocate-penaliste.jpg"
+                alt="Sophie Martins"
+                class="team-member-img w-full h-96 object-cover"
+              />
+            </div>
+            <h3 class="font-serif text-2xl font-bold mb-2">Mathilde B</h3>
+            <p class="text-secondary mb-4">Avocate Associée</p>
+            <p class="text-gray-300 mb-6 px-4">
+              Spécialiste en droit pénal avec 10 ans d'expérience.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-white group"
+            >
+              <span class="mr-2">Profil complet</span>
+              <i
+                class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Member 2 -->
+          <div
+            class="team-member text-center animate-fade-in animate-delay-200"
+          >
+            <div class="mb-6 overflow-hidden rounded-lg">
+              <img
+                src="./img/antony-martins_avocat-penaliste.jpg"
+                alt="Jean Canet"
+                class="team-member-img w-full h-96 object-cover"
+              />
+            </div>
+            <h3 class="font-serif text-2xl font-bold mb-2">Antony M</h3>
+            <p class="text-secondary mb-4">Avocat Associé</p>
+            <p class="text-gray-300 mb-6 px-4">
+              Expert en contentieux commercial et arbitrage international,
+              ancien secrétaire de la conférence.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-white group"
+            >
+              <span class="mr-2">Profil complet</span>
+              <i
+                class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Member 3 -->
+          <div
+            class="team-member text-center animate-fade-in animate-delay-300"
+          >
+            <div class="mb-6 overflow-hidden rounded-lg">
+              <img
+                src="./img/laura-canet_avocate-arbitrage.jpg"
+                alt="Marie Leroy"
+                class="team-member-img w-full h-96 object-cover"
+              />
+            </div>
+            <h3 class="font-serif text-2xl font-bold mb-2">Laura C</h3>
+            <p class="text-secondary mb-4">Avocate Associée</p>
+            <p class="text-gray-300 mb-6 px-4">
+              International Arbitration II Co- founder Young Mute Off Thursdays
+              (YMOT)
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-white group"
+            >
+              <span class="mr-2">Profil complet</span>
+              <i
+                class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-16 animate-fade-in">
+          <a href="#" class="btn-secondary inline-block px-10 py-4"
+            >Rencontrer toute l'équipe</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20 bg-light">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20 animate-fade-in">
-                <h2 class="font-serif text-4xl font-bold mb-4">
-                    Ils nous <span class="text-primary">font confiance</span>
-                </h2>
-                <p class="max-w-2xl mx-auto text-gray-600">
-                    Les témoignages de nos clients reflètent notre engagement et notre expertise.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-10 rounded-lg shadow-sm animate-fade-in animate-delay-100">
-                    <div class="flex items-center mb-6">
-                        <div class="text-3xl text-secondary mr-4">"</div>
-                        <div class="flex-1">
-                            <p class="text-gray-600 italic leading-relaxed">
-                                Le cabinet Martins Canet nous accompagne depuis 10 ans avec une expertise remarquable et
-                                une réactivité exemplaire.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Pierre D."
-                            class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold text-primary">Pierre Dubois</h4>
-                            <p class="text-sm text-gray-500">PDG, Groupe Financier</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-10 rounded-lg shadow-sm animate-fade-in animate-delay-200">
-                    <div class="flex items-center mb-6">
-                        <div class="text-3xl text-secondary mr-4">"</div>
-                        <div class="flex-1">
-                            <p class="text-gray-600 italic leading-relaxed">
-                                Leur analyse stratégique et leur maîtrise du contentieux ont été déterminantes dans le
-                                succès de notre dossier.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophie L."
-                            class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-bold text-primary">Sophie Lambert</h4>
-                            <p class="text-sm text-gray-500">Directrice Juridique, Groupe Industriel</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="testimonials" class="py-20 bg-light">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20 animate-fade-in">
+          <h2 class="font-serif text-4xl font-bold mb-4">
+            Ils nous <span class="text-primary">font confiance</span>
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Les témoignages de nos clients reflètent notre engagement et notre
+            expertise.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white p-10 rounded-lg shadow-sm animate-fade-in animate-delay-100"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-3xl text-secondary mr-4">"</div>
+              <div class="flex-1">
+                <p class="text-gray-600 italic leading-relaxed">
+                  Le cabinet Martins Canet nous accompagne depuis 10 ans avec
+                  une expertise remarquable et une réactivité exemplaire.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Pierre D."
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-bold text-primary">Pierre Dubois</h4>
+                <p class="text-sm text-gray-500">PDG, Groupe Financier</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white p-10 rounded-lg shadow-sm animate-fade-in animate-delay-200"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-3xl text-secondary mr-4">"</div>
+              <div class="flex-1">
+                <p class="text-gray-600 italic leading-relaxed">
+                  Leur analyse stratégique et leur maîtrise du contentieux ont
+                  été déterminantes dans le succès de notre dossier.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Sophie L."
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-bold text-primary">Sophie Lambert</h4>
+                <p class="text-sm text-gray-500">
+                  Directrice Juridique, Groupe Industriel
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- News Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-16 animate-fade-in">
-                <div class="mb-6 md:mb-0">
-                    <h2 class="font-serif text-4xl font-bold">
-                        <span class="text-primary">Actualités</span> juridiques
-                    </h2>
-                </div>
-                <a href="#"
-                    class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group">
-                    <span class="mr-2">Voir toutes les actualités</span>
-                    <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                </a>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- News 1 -->
-                <div class="expertise-card bg-light rounded-lg overflow-hidden animate-fade-in animate-delay-100">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="Réforme droit des sociétés" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <p class="text-sm text-gray-500 mb-2">15 juin 2023</p>
-                        <h3 class="font-serif text-xl font-bold mb-4 text-primary">Réforme du droit des sociétés :
-                            impacts majeurs</h3>
-                        <p class="text-gray-600 mb-6">
-                            Analyse des principales modifications introduites par la loi du 12 mai 2023 et leurs
-                            conséquences pour les entreprises.
-                        </p>
-                        <a href="#"
-                            class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group">
-                            <span class="mr-2">Lire l'article</span>
-                            <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- News 2 -->
-                <div class="expertise-card bg-light rounded-lg overflow-hidden animate-fade-in animate-delay-200">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="Jurisprudence baux commerciaux" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <p class="text-sm text-gray-500 mb-2">2 mai 2023</p>
-                        <h3 class="font-serif text-xl font-bold mb-4 text-primary">Nouvelle jurisprudence sur les baux
-                            commerciaux</h3>
-                        <p class="text-gray-600 mb-6">
-                            Décryptage de l'arrêt de la Cour de cassation du 15 avril 2023 et ses implications pour les
-                            propriétaires et locataires.
-                        </p>
-                        <a href="#"
-                            class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group">
-                            <span class="mr-2">Lire l'article</span>
-                            <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- News 3 -->
-                <div class="expertise-card bg-light rounded-lg overflow-hidden animate-fade-in animate-delay-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt="RGPD 5 ans" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <p class="text-sm text-gray-500 mb-2">18 avril 2023</p>
-                        <h3 class="font-serif text-xl font-bold mb-4 text-primary">5 ans du RGPD : bilan et perspectives
-                        </h3>
-                        <p class="text-gray-600 mb-6">
-                            Retour sur l'évolution de la protection des données depuis 2018 et les tendances à anticiper
-                            pour les entreprises.
-                        </p>
-                        <a href="#"
-                            class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group">
-                            <span class="mr-2">Lire l'article</span>
-                            <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <section id="news" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-16 animate-fade-in"
+        >
+          <div class="mb-6 md:mb-0">
+            <h2 class="font-serif text-4xl font-bold">
+              <span class="text-primary">Actualités</span> juridiques
+            </h2>
+          </div>
+          <a
+            href="#"
+            class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group"
+          >
+            <span class="mr-2">Voir toutes les actualités</span>
+            <i
+              class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+            ></i>
+          </a>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- News 1 -->
+          <div
+            class="expertise-card bg-light rounded-lg overflow-hidden animate-fade-in animate-delay-100"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Réforme droit des sociétés"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8">
+              <p class="text-sm text-gray-500 mb-2">15 juin 2023</p>
+              <h3 class="font-serif text-xl font-bold mb-4 text-primary">
+                Réforme du droit des sociétés : impacts majeurs
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Analyse des principales modifications introduites par la loi du
+                12 mai 2023 et leurs conséquences pour les entreprises.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group"
+              >
+                <span class="mr-2">Lire l'article</span>
+                <i
+                  class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- News 2 -->
+          <div
+            class="expertise-card bg-light rounded-lg overflow-hidden animate-fade-in animate-delay-200"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Jurisprudence baux commerciaux"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8">
+              <p class="text-sm text-gray-500 mb-2">2 mai 2023</p>
+              <h3 class="font-serif text-xl font-bold mb-4 text-primary">
+                Nouvelle jurisprudence sur les baux commerciaux
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Décryptage de l'arrêt de la Cour de cassation du 15 avril 2023
+                et ses implications pour les propriétaires et locataires.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group"
+              >
+                <span class="mr-2">Lire l'article</span>
+                <i
+                  class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- News 3 -->
+          <div
+            class="expertise-card bg-light rounded-lg overflow-hidden animate-fade-in animate-delay-300"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="RGPD 5 ans"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8">
+              <p class="text-sm text-gray-500 mb-2">18 avril 2023</p>
+              <h3 class="font-serif text-xl font-bold mb-4 text-primary">
+                5 ans du RGPD : bilan et perspectives
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Retour sur l'évolution de la protection des données depuis 2018
+                et les tendances à anticiper pour les entreprises.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm uppercase tracking-wider font-medium text-primary group"
+              >
+                <span class="mr-2">Lire l'article</span>
+                <i
+                  class="fas fa-arrow-right transition-transform group-hover:translate-x-1"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-20 bg-primary text-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto animate-fade-in">
-                <div class="text-center mb-16">
-                    <h2 class="font-serif text-4xl font-bold mb-4">
-                        Nous <span class="text-secondary">contacter</span>
-                    </h2>
-                    <p class="max-w-2xl mx-auto text-gray-300">
-                        Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner dans vos
-                        projets.
-                    </p>
-                </div>
+    <section id="contact" class="py-20 bg-primary text-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto animate-fade-in">
+          <div class="text-center mb-16">
+            <h2 class="font-serif text-4xl font-bold mb-4">
+              Nous <span class="text-secondary">contacter</span>
+            </h2>
+            <p class="max-w-2xl mx-auto text-gray-300">
+              Notre équipe est à votre disposition pour répondre à vos questions
+              et vous accompagner dans vos projets.
+            </p>
+          </div>
 
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="animate-fade-in animate-delay-100">
-                        <div class="mb-8">
-                            <h3 class="font-serif text-xl font-bold mb-4">Adresse</h3>
-                            <p class="text-gray-300 mb-2">12 rue de la Paix</p>
-                            <p class="text-gray-300">75002 Paris, France</p>
-                        </div>
+          <div class="grid md:grid-cols-2 gap-10">
+            <div class="animate-fade-in animate-delay-100">
+              <div class="mb-8">
+                <h3 class="font-serif text-xl font-bold mb-4">Adresse</h3>
+                <p class="text-gray-300 mb-2">12 rue de la Paix</p>
+                <p class="text-gray-300">75002 Paris, France</p>
+              </div>
 
-                        <div class="mb-8">
-                            <h3 class="font-serif text-xl font-bold mb-4">Contact</h3>
-                            <p class="text-gray-300 mb-2">Tél: +33 1 23 45 67 89</p>
-                            <p class="text-gray-300 mb-2">Fax: +33 1 23 45 67 80</p>
-                            <p class="text-gray-300">contact@bmc-avocats.com</p>
-                        </div>
+              <div class="mb-8">
+                <h3 class="font-serif text-xl font-bold mb-4">Contact</h3>
+                <p class="text-gray-300 mb-2">Tél: +33 1 23 45 67 89</p>
+                <p class="text-gray-300 mb-2">Fax: +33 1 23 45 67 80</p>
+                <p class="text-gray-300">contact@bmc-avocats.com</p>
+              </div>
 
-                        <div>
-                            <h3 class="font-serif text-xl font-bold mb-4">Horaires</h3>
-                            <p class="text-gray-300 mb-2">Lundi - Vendredi: 9h00 - 19h00</p>
-                            <p class="text-gray-300">Sur rendez-vous uniquement</p>
-                        </div>
-                    </div>
-
-                    <div class="animate-fade-in animate-delay-200">
-                        <form class="space-y-6">
-                            <div>
-                                <label for="name"
-                                    class="block text-sm font-medium mb-2 uppercase tracking-wider">Nom</label>
-                                <input type="text" id="name"
-                                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none">
-                            </div>
-
-                            <div>
-                                <label for="email"
-                                    class="block text-sm font-medium mb-2 uppercase tracking-wider">Email</label>
-                                <input type="email" id="email"
-                                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none">
-                            </div>
-
-                            <div>
-                                <label for="phone"
-                                    class="block text-sm font-medium mb-2 uppercase tracking-wider">Téléphone</label>
-                                <input type="tel" id="phone"
-                                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none">
-                            </div>
-
-                            <div>
-                                <label for="subject"
-                                    class="block text-sm font-medium mb-2 uppercase tracking-wider">Sujet</label>
-                                <select id="subject"
-                                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none">
-                                    <option value="">Sélectionnez un sujet</option>
-                                    <option value="droit-societes">Droit des sociétés</option>
-                                    <option value="contentieux">Contentieux commercial</option>
-                                    <option value="immobilier">Droit immobilier</option>
-                                    <option value="autre">Autre demande</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="message"
-                                    class="block text-sm font-medium mb-2 uppercase tracking-wider">Message</label>
-                                <textarea id="message" rows="4"
-                                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none"></textarea>
-                            </div>
-
-                            <div>
-                                <button type="submit" class="btn-secondary w-full px-8 py-4">Envoyer le message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+              <div>
+                <h3 class="font-serif text-xl font-bold mb-4">Horaires</h3>
+                <p class="text-gray-300 mb-2">Lundi - Vendredi: 9h00 - 19h00</p>
+                <p class="text-gray-300">Sur rendez-vous uniquement</p>
+              </div>
             </div>
+
+            <div class="animate-fade-in animate-delay-200">
+              <form class="space-y-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium mb-2 uppercase tracking-wider"
+                    >Nom</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium mb-2 uppercase tracking-wider"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium mb-2 uppercase tracking-wider"
+                    >Téléphone</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium mb-2 uppercase tracking-wider"
+                    >Sujet</label
+                  >
+                  <select
+                    id="subject"
+                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none"
+                  >
+                    <option value="">Sélectionnez un sujet</option>
+                    <option value="droit-societes">Droit des sociétés</option>
+                    <option value="contentieux">Contentieux commercial</option>
+                    <option value="immobilier">Droit immobilier</option>
+                    <option value="autre">Autre demande</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium mb-2 uppercase tracking-wider"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-3 bg-primary border-b border-gray-500 focus:border-secondary text-white placeholder-gray-400 focus:outline-none"
+                  ></textarea>
+                </div>
+
+                <div>
+                  <button type="submit" class="btn-secondary w-full px-8 py-4">
+                    Envoyer le message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Map Section -->
-    <div class="h-96 w-full bg-gray-200 animate-fade-in">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.373561367246!2d2.331642315675131!3d48.8699281792889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2984f1b8a5%3A0x4eb92a5f1f6e4f9!2s12%20Rue%20de%20la%20Paix%2C%2075002%20Paris!5e0!3m2!1sfr!2sfr!4v1684851234567!5m2!1sfr!2sfr"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="map" class="h-96 w-full bg-gray-200 animate-fade-in">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.373561367246!2d2.331642315675131!3d48.8699281792889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2984f1b8a5%3A0x4eb92a5f1f6e4f9!2s12%20Rue%20de%20la%20Paix%2C%2075002%20Paris!5e0!3m2!1sfr!2sfr!4v1684851234567!5m2!1sfr!2sfr"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-5 gap-10">
-                <div class="md:col-span-2">
-                    <h3 class="font-serif text-xl font-bold mb-6 tracking-tight">B . M . C | Avocats Pénalistes</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Cabinet d'avocats pénalistes offrant des solutions juridiques sur mesure depuis 2025.
-                    </p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-secondary text-xl transition-all"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-secondary text-xl transition-all"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-secondary text-xl transition-all"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="text-sm font-medium uppercase mb-6 tracking-wider">Navigation</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Accueil</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Le cabinet</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Expertises</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Équipe</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Actualités</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-sm font-medium uppercase mb-6 tracking-wider">Expertises</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Droit des sociétés</a>
-                        </li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Contentieux
-                                commercial</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Droit immobilier</a>
-                        </li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Conformité & RSE</a>
-                        </li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Droit fiscal</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-secondary transition-all">Droit
-                                international</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-sm font-medium uppercase mb-6 tracking-wider">Contact</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-secondary mr-3 mt-1"></i>
-                            <span class="text-gray-400">12 rue de la Paix, 75002 Paris</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt text-secondary mr-3"></i>
-                            <span class="text-gray-400">01 23 45 67 89</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope text-secondary mr-3"></i>
-                            <span class="text-gray-400">contact@bmc-avocats.com</span>
-                        </li>
-                    </ul>
-                </div>
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-5 gap-10">
+          <div class="md:col-span-2">
+            <a href="index.html"
+              ><h3 class="font-serif text-xl font-bold mb-6 tracking-tight">
+                B . M . C | Avocats Pénalistes
+              </h3></a
+            >
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Cabinet d'avocats pénalistes offrant des solutions juridiques sur
+              mesure depuis 2025.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="https://linkedin.com"
+                class="text-gray-400 hover:text-secondary text-xl transition-all"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://x.com/twitterlive"
+                class="text-gray-400 hover:text-secondary text-xl transition-all"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                class="text-gray-400 hover:text-secondary text-xl transition-all"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 - B . M . C | Avocats Pénalistes. Tous droits réservés.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-secondary text-sm transition-all">Mentions légales</a>
-                    <a href="#" class="text-gray-400 hover:text-secondary text-sm transition-all">Politique de
-                        confidentialité</a>
-                    <a href="#" class="text-gray-400 hover:text-secondary text-sm transition-all">Plan du site</a>
-                </div>
-            </div>
+          <div>
+            <h4 class="text-sm font-medium uppercase mb-6 tracking-wider">
+              Navigation
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Le cabinet</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#expertise"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Expertises</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#team"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Équipe</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#news"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Actualités</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-medium uppercase mb-6 tracking-wider">
+              Expertises
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Droit des sociétés</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Contentieux commercial</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Droit immobilier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Conformité & RSE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Droit fiscal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-secondary transition-all"
+                  >Droit international</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-medium uppercase mb-6 tracking-wider">
+              Contact
+            </h4>
+            <ul class="space-y-3">
+              <a href="https://maps.app.goo.gl/FSXBiQTrU5Qk5qYy7" target="new">
+                <li class="flex items-start">
+                  <i class="fas fa-map-marker-alt text-secondary mr-3 mt-1"></i>
+                  <span class="text-gray-400"
+                    >12 rue de la Paix, 75002 Paris</span
+                  >
+                </li>
+              </a>
+              <a href="tel:+33123456789">
+                <li class="flex items-center">
+                  <i class="fas fa-phone-alt text-secondary mr-3"></i>
+                  <span class="text-gray-400">01 23 45 67 89</span>
+                </li>
+              </a>
+              <a href="mailto:contact@bmc-avocats.com">
+                <li class="flex items-center">
+                  <i class="fas fa-envelope text-secondary mr-3"></i>
+                  <span class="text-gray-400">contact@bmc-avocats.com</span>
+                </li>
+              </a>
+            </ul>
+          </div>
         </div>
+
+        <div
+          class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 - B . M . C | Avocats Pénalistes. Tous droits réservés.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-secondary text-sm transition-all"
+              >Mentions légales</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-secondary text-sm transition-all"
+              >Politique de confidentialité</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-secondary text-sm transition-all"
+              >Plan du site</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
